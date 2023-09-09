@@ -1,0 +1,136 @@
+<div class="currency-converter">
+  
+    <div class="nav-tabs">
+      <div class="nav-item" (click)="activeTab = 'buy'">
+        <a class="nav-link" [class.active]="activeTab === 'buy'">Buy</a>
+      </div>
+      <div class="nav-item" (click)="activeTab = 'load'">
+        <a class="nav-link" [class.active]="activeTab === 'load'">Load</a>
+      </div>
+      <div class="nav-item" (click)="activeTab = 'unload'">
+        <a class="nav-link" [class.active]="activeTab === 'unload'">Unload</a>
+      </div>
+    </div>
+  
+    <div class="tab-content">
+      <div *ngIf="activeTab === 'buy'" class="tab-pane fade" [class.show]="activeTab === 'buy'">
+        <!-- Buy Form -->
+        <div class="input-group">
+            <label for="currency">Select City:</label>
+            <select id="currency" [(ngModel)]="selectedCurrency">
+              <option value="USD">Ajmer</option>
+              <option value="EUR">Delhi</option>
+              <!-- Add more currency options -->
+            </select>
+          </div>
+        <div class="input-group">
+          <label for="currency">Select Currency:</label>
+          <select id="currency" [(ngModel)]="selectedCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <!-- Add more currency options -->
+          </select>
+        </div>
+        <div class="exchange-rate">
+            <p>Rate: {{ exchangeRate }}</p>
+          </div>
+    
+       <div class="in-row">
+        <div class="input-group">
+            <label for="amount">Enter Forex Amount:</label>
+            <input id="amount" type="number" [(ngModel)]="amount" />
+          </div>
+          <div class="input-group">
+              <label for="amount">Enter INR Amount:</label>
+              <input id="amount" type="number" [(ngModel)]="amount" />
+            </div>
+       </div>
+  
+        <div class="exchange-rate">
+          <p>Total: {{ exchangeRate }}</p>
+        </div>
+  
+        <button class="buy-button" (click)="buy()">Buy</button>
+      </div>
+  
+      <div *ngIf="activeTab === 'load'" class="tab-pane fade" [class.show]="activeTab === 'load'">
+        <div class="input-group">
+            <label for="card">Enter Forex Card Number:</label>
+            <input id="card" type="number" />
+          </div>
+        <div class="input-group">
+            <label for="currency">Base Coutry:</label>
+            <select id="currency" >
+                <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>>
+              <!-- Add more currency options -->
+            </select>
+          </div>
+        <div class="input-group">
+          <label for="currency">Quote Country:</label>
+          <select id="currency" >
+            <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>>
+            <!-- Add more currency options -->
+          </select>
+        </div>
+        <div class="input-group">
+            <label for="currency">Base Currency:</label>
+            <select id="currency" >
+                <option *ngFor="let country of countries" [value]="country.currency">{{ country.currency }}</option>>
+              <!-- Add more currency options -->
+            </select>
+          </div>
+        <div class="input-group">
+          <label for="currency">Quote Currency:</label>
+          <select id="currency">
+            <option *ngFor="let country of countries" [value]="country.currency">{{ country.currency }}</option>>
+            <!-- Add more currency options -->
+          </select>
+        </div>
+        <div class="exchange-rate">
+            <p>Rate: {{ exchangeRate }}</p>
+          </div>
+    
+          <button class="buy-button" (click)="buy()">load</button>
+      </div>
+  
+      <div *ngIf="activeTab === 'unload'" class="tab-pane fade" [class.show]="activeTab === 'unload'">
+        <div class="input-group">
+            <label for="card">Enter Forex Card Number:</label>
+            <input id="card" type="number" />
+          </div>
+        <div class="input-group">
+            <label for="currency">Base Coutry:</label>
+            <select id="currency" >
+                <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>>
+              <!-- Add more currency options -->
+            </select>
+          </div>
+        <div class="input-group">
+          <label for="currency">Quote Country:</label>
+          <select id="currency" >
+            <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>>
+            <!-- Add more currency options -->
+          </select>
+        </div>
+        <div class="input-group">
+            <label for="currency">Base Currency:</label>
+            <select id="currency" >
+                <option *ngFor="let country of countries" [value]="country.currency">{{ country.currency }}</option>>
+              <!-- Add more currency options -->
+            </select>
+          </div>
+        <div class="input-group">
+          <label for="currency">Quote Currency:</label>
+          <select id="currency">
+            <option *ngFor="let country of countries" [value]="country.currency">{{ country.currency }}</option>>
+            <!-- Add more currency options -->
+          </select>
+        </div>
+        <div class="exchange-rate">
+            <p>Rate: {{ exchangeRate }}</p>
+          </div>
+          <button class="buy-button" (click)="buy()">Unload</button>
+      </div>
+    </div>
+  </div>
+  
