@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./buy-component.component.scss']
 })
 export class BuyComponentComponent implements OnInit {
+  inputField1='';
   selectedCountry!: string;
   countries!: any[]; // Array to store the list of countries and currencies
 

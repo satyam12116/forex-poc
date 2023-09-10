@@ -7,10 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BuyComponentComponent } from './buy-component/buy-component.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BuyComponentComponent
+    BuyComponentComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
