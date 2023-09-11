@@ -42,7 +42,7 @@ export class BuyComponentComponent implements OnInit {
   }
   load(){
     let  apiUrl = 'http://localhost:8091/card/money';
-    const url=`${apiUrl}/${this.inputField1}${this.selectField1}/${this.selectField3}/${this.selectField2}/${this.selectField4}/${this.amount*this.exchangeRate}`;
+    const url=`${apiUrl}/${this.inputField1}/${this.selectField1}/${this.selectField3}/${this.selectField2}/${this.selectField4}/${this.amount*this.exchangeRate}`;
     this.http.post(url,{}).subscribe(res=>{
       if(res){
         this.router.navigate(['/payment']);
@@ -51,7 +51,7 @@ export class BuyComponentComponent implements OnInit {
   }
   unload(){
     let  apiUrl = 'http://localhost:8091/card/money';
-    const url=`${apiUrl}/${this.inputField1}/${this.amount*this.exchangeRate}${this.selectField1}/${this.selectField3}/${this.selectField2}/${this.selectField4}`;
+    const url=`${apiUrl}/${this.inputField1}/${this.amount*this.exchangeRate}/${this.selectField1}/${this.selectField3}/${this.selectField2}/${this.selectField4}`;
     this.http.put(url,{}).subscribe(res=>{
       if(res){
         this.router.navigate(['/payment']);
