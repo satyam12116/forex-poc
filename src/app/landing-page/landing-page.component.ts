@@ -12,5 +12,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
     this.selectedLogin = localStorage.getItem('selectedLogin');
   }
+  expandCard() {
+    let card :HTMLElement |any= document.getElementById('expandableCard');
+    card.classList.toggle('expanded');
+}
 
 }

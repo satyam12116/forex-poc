@@ -182,7 +182,7 @@
 //   /* Responsiveness:End */
   .display-row{
     display:flex;
-  
+//     box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
    justify-content: space-around;
     width: 100%;
   
@@ -196,6 +196,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    // box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
 
 }
 
@@ -206,27 +207,32 @@
     flex: 1;
     max-width: 50%;
     padding: 20px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
+    // box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
 }
 
 /* Style for the right side (description) */
 .forex-card-description {
     flex: 1;
     padding: 20px;
+    margin-right: 80px;
 }
 
 /* Additional styling for the description text */
 .forex-card-description h2 {
     font-size: 24px;
     margin-bottom: 10px;
+
 }
 
 .forex-card-description p {
     font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    color:rgb(174, 166, 166);
 }
 .card {
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 20px;
@@ -250,15 +256,23 @@
     flex-direction: column;
     justify-content: center;
 }
-
+p{
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; 
+}
 .card h3 {
-    font-size: 24px;
+    font-size: 18px;
     margin: 10px 0;
+    color:black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+   "Lucida Sans", Arial, sans-serif;
 }
 
 .card p {
     font-size: 16px;
     color: #777;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .card:hover {
@@ -281,7 +295,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    width: 80%;
+    width: 90%;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
@@ -298,4 +312,38 @@
     color: #fff; 
     padding: 20px; 
     text-align: center; 
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Spacing between list items */
+    padding-left: 30px; /* Indentation for the tick symbol */
+    position: relative; /* Position for the tick symbol */
+    font-size: 16px;
+}
+
+li::before {
+    content: "\2713"; /* Unicode character for a checkmark */
+    font-size: 18px;
+    color: #007BFF; /* Color of the checkmark */
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.important-link{
+    margin: 40px;
+}
+.texx{
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
+    color:black;
+    font-size: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+   "Lucida Sans", Arial, sans-serif;
 }
